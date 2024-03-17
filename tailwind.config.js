@@ -1,5 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  purge: {
+    options: {
+      safelist: ['active'],
+    },
+  },
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -64,7 +69,6 @@ export default {
         'bold-m' : '16px',
         'bold-s' : '14px',
         'bold-xs' : '12px'
-
       },
     },
   },

@@ -1,19 +1,9 @@
-import "./App.css";
-import Layout from "./components/Layout";
-import { Login, SignUp, ForgotPassword, ResetPassword } from "./Pages";
-import { Routes, Route } from "react-router-dom";
+import { useRoutes } from "react-router-dom"
+import routes from './routes'
 
-function App() {
-  return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Login />} />
-        <Route path="signUp" element={<SignUp />} />
-        <Route path="forgotPassword" element={<ForgotPassword />} />
-        <Route path="resetPassword" element={<ResetPassword />} />
-      </Route>
-    </Routes>
-  );
+function App(){
+  return useRoutes(routes)
+
 }
 
-export default App;
+export default App
